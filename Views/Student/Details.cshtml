@@ -1,0 +1,94 @@
+﻿@model wt_lab4_4mvc_liger.Models.Student
+
+@{
+    ViewData["Title"] = "Информация о студенте";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="card shadow-sm rounded-4 border-0">
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="mb-0">
+                            <i class="bi bi-person-badge text-primary"></i>
+                            Информация о студенте
+                        </h2>
+                        @if (Model.IsEnrolled)
+                        {
+                            <span class="badge bg-success fs-6">Зачислен</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary fs-6">Не зачислен</span>
+                        }
+                    </div>
+
+                    <dl class="row">
+                        <dt class="col-sm-4">
+                            <i class="bi bi-hash text-muted"></i> ID
+                        </dt>
+                        <dd class="col-sm-8">@Model.Id</dd>
+
+                        <dt class="col-sm-4">
+                            <i class="bi bi-person text-muted"></i> ФИО
+                        </dt>
+                        <dd class="col-sm-8">@Model.FullName</dd>
+
+                        <dt class="col-sm-4">
+                            <i class="bi bi-building text-muted"></i> Специальность
+                        </dt>
+                        <dd class="col-sm-8">@Model.Faculty</dd>
+
+                        <dt class="col-sm-4">
+                            <i class="bi bi-book text-muted"></i> Курс
+                        </dt>
+                        <dd class="col-sm-8">@Model.Course</dd>
+
+                        <dt class="col-sm-4">
+                            <i class="bi bi-star text-muted"></i> Средний балл
+                        </dt>
+                        <dd class="col-sm-8">
+                            <span class="badge bg-info text-dark">@Model.AverageGrade</span>
+                        </dd>
+
+                        <dt class="col-sm-4">
+                            <i class="bi bi-check-circle text-muted"></i> Зачислен
+                        </dt>
+                        <dd class="col-sm-8">
+                            @if (Model.IsEnrolled)
+                            {
+                                <span class="badge bg-success">Да</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">Нет</span>
+                            }
+                        </dd>
+                    </dl>
+
+                    <hr />
+
+                    <div class="d-flex gap-2">
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Назад к списку
+                        </a>
+
+                        <form asp-action="Delete"
+                              asp-route-id="@Model.Id"
+                              method="post"
+                              onsubmit="return confirm('Удалить студента @Model.FullName?');">
+                            <button type="submit" class="btn btn-outline-danger">
+                                <i class="bi bi-trash"></i> Удалить
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,179 @@
+﻿@{
+    ViewData["Title"] = "О работе";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <!-- Заголовок -->
+            <div class="card shadow-sm rounded-4 border-0 mb-4">
+                <div class="card-body p-4 text-center">
+                    <h1 class="display-6 fw-bold text-primary mb-3">
+                        <i class="bi bi-info-circle"></i>
+                        О лабораторной работе
+                    </h1>
+                    <p class="lead text-muted mb-0">
+                        WT-4: Разработка веб-приложения на ASP.NET Core MVC
+                    </p>
+                </div>
+            </div>
+
+            <!-- Описание работы -->
+            <div class="card shadow-sm rounded-4 border-0 mb-4">
+                <div class="card-body p-4">
+                    <h3 class="mb-3">
+                        <i class="bi bi-journal-text text-primary"></i>
+                        Описание работы
+                    </h3>
+                    <p>
+                        Лабораторная работа №4 по дисциплине <strong>«Web-технологии»</strong>.
+                        Цель — освоить разработку веб-приложений с использованием
+                        архитектурного подхода <strong>ASP.NET Core MVC</strong>.
+                    </p>
+                    <p class="mb-0">
+                        В работе используется та же предметная область, что и в WT-3.
+                        Данные хранятся в памяти приложения — база данных не применяется.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Предметная область -->
+            <div class="card shadow-sm rounded-4 border-0 mb-4">
+                <div class="card-body p-4">
+                    <h3 class="mb-3">
+                        <i class="bi bi-mortarboard text-primary"></i>
+                        Предметная область
+                    </h3>
+                    <dl class="row mb-0">
+                        <dt class="col-sm-4">Предметная область</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge bg-primary">Университет</span>
+                        </dd>
+
+                        <dt class="col-sm-4">Основная сущность</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge bg-success">Student</span>
+                        </dd>
+
+                        <dt class="col-sm-4">Модель</dt>
+                        <dd class="col-sm-8"><code>Models/Student.cs</code></dd>
+
+                        <dt class="col-sm-4">Контроллер</dt>
+                        <dd class="col-sm-8"><code>Controllers/StudentController.cs</code></dd>
+
+                        <dt class="col-sm-4">Представления</dt>
+                        <dd class="col-sm-8">
+                            <code>Views/Student/Index.cshtml</code><br />
+                            <code>Views/Student/Details.cshtml</code><br />
+                            <code>Views/Student/Create.cshtml</code>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- Функциональность -->
+            <div class="card shadow-sm rounded-4 border-0 mb-4">
+                <div class="card-body p-4">
+                    <h3 class="mb-3">
+                        <i class="bi bi-list-check text-primary"></i>
+                        Функциональность приложения
+                    </h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle text-success"></i>
+                            Просмотр списка студентов — <code>/Student/Index</code>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle text-success"></i>
+                            Просмотр подробной информации — <code>/Student/Details/{id}</code>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle text-success"></i>
+                            Добавление студента (GET + POST) — <code>/Student/Create</code>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle text-success"></i>
+                            Удаление студента (POST) — <code>/Student/Delete/{id}</code>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle text-success"></i>
+                            Валидация формы добавления
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Технологии -->
+            <div class="card shadow-sm rounded-4 border-0 mb-4">
+                <div class="card-body p-4">
+                    <h3 class="mb-3">
+                        <i class="bi bi-stack text-primary"></i>
+                        Использованные технологии
+                    </h3>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-primary fs-6 p-2">ASP.NET Core MVC</span>
+                        <span class="badge bg-primary fs-6 p-2">.NET 8</span>
+                        <span class="badge bg-success fs-6 p-2">C#</span>
+                        <span class="badge bg-info text-dark fs-6 p-2">Razor Views</span>
+                        <span class="badge bg-warning text-dark fs-6 p-2">Bootstrap 5</span>
+                        <span class="badge bg-secondary fs-6 p-2">Bootstrap Icons</span>
+                        <span class="badge bg-dark fs-6 p-2">Docker</span>
+                        <span class="badge bg-dark fs-6 p-2">Render</span>
+                        <span class="badge bg-dark fs-6 p-2">Git</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Архитектура MVC -->
+            <div class="card shadow-sm rounded-4 border-0 mb-4">
+                <div class="card-body p-4">
+                    <h3 class="mb-3">
+                        <i class="bi bi-diagram-3 text-primary"></i>
+                        Архитектура MVC
+                    </h3>
+                    <div class="row text-center g-3">
+                        <div class="col-md-4">
+                            <div class="border rounded-3 p-3 h-100">
+                                <div class="fs-1">📚</div>
+                                <h5>Model</h5>
+                                <p class="text-muted small mb-0">
+                                    Данные и структура предметной области
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="border rounded-3 p-3 h-100">
+                                <div class="fs-1">🎛️</div>
+                                <h5>Controller</h5>
+                                <p class="text-muted small mb-0">
+                                    Обработка HTTP-запросов
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="border rounded-3 p-3 h-100">
+                                <div class="fs-1">🖼️</div>
+                                <h5>View</h5>
+                                <p class="text-muted small mb-0">
+                                    Формирование HTML-страниц
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопки -->
+            <div class="d-flex gap-2 justify-content-center mb-5 flex-wrap">
+                <a asp-controller="Student" asp-action="Index" class="btn btn-primary">
+                    <i class="bi bi-people"></i> К списку студентов
+                </a>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">
+                    <i class="bi bi-house-door"></i> На главную
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

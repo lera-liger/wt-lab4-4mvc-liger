@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<!-- Hero-блок -->
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <div class="card shadow-lg rounded-4 border-0 mb-4 overflow-hidden">
+                <div class="card-body p-5 text-center bg-light">
+
+                    <img src="~/images/logo.png"
+                         alt="Эмблема университета"
+                         height="100"
+                         class="mb-4" />
+
+                    <h1 class="display-5 fw-bold text-primary mb-3">
+                        Академия управления при Президенте Республики Беларусь
+                    </h1>
+
+                    <p class="lead text-muted mb-4">
+                        Информационная система управления студентами
+                    </p>
+
+                    <div class="d-flex gap-2 justify-content-center flex-wrap">
+                        <a asp-controller="Student"
+                           asp-action="Index"
+                           class="btn btn-primary btn-lg px-4">
+                            <i class="bi bi-people"></i> Список студентов
+                        </a>
+
+                        <a asp-controller="Student"
+                           asp-action="Create"
+                           class="btn btn-outline-primary btn-lg px-4">
+                            <i class="bi bi-person-plus"></i> Добавить студента
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Информационные карточки -->
+            <div class="row g-3 mb-4">
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="card-body text-center">
+                            <div class="fs-1 text-primary mb-3">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h5 class="card-title">Студенты</h5>
+                            <p class="card-text text-muted small mb-3">
+                                Просмотр списка студентов, их факультетов и успеваемости
+                            </p>
+                            <a asp-controller="Student" asp-action="Index"
+                               class="btn btn-sm btn-outline-primary">
+                                Перейти
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="card-body text-center">
+                            <div class="fs-1 text-success mb-3">
+                                <i class="bi bi-person-plus-fill"></i>
+                            </div>
+                            <h5 class="card-title">Приём</h5>
+                            <p class="card-text text-muted small mb-3">
+                                Регистрация новых студентов в системе университета
+                            </p>
+                            <a asp-controller="Student" asp-action="Create"
+                               class="btn btn-sm btn-outline-success">
+                                Добавить
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm rounded-4 border-0">
+                        <div class="card-body text-center">
+                            <div class="fs-1 text-warning mb-3">
+                                <i class="bi bi-info-circle-fill"></i>
+                            </div>
+                            <h5 class="card-title">О системе</h5>
+                            <p class="card-text text-muted small mb-3">
+                                Информация о назначении и возможностях системы
+                            </p>
+                            <a asp-controller="Home" asp-action="Privacy"
+                               class="btn btn-sm btn-outline-warning">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <<div class="card shadow-sm rounded-4 border-0 mb-5">
+                <div class="card-body p-4">
+                    <h3 class="mb-4 text-center">
+                        <i class="bi bi-building text-primary"></i>
+                        Специальности
+                    </h3>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <ul class="list-group list-group-flush text-center">
+                                <li class="list-group-item">
+                                    <i class="bi bi-cpu text-primary me-2"></i>
+                                    Управление информационными ресурсами
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-graph-up text-primary me-2"></i>
+                                    Государственное управление и экономика
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-bank text-primary me-2"></i>
+                                    Государственное управление и право
+                                </li>
+ 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
